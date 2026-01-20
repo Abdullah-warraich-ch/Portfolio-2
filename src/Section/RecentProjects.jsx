@@ -10,7 +10,10 @@ function RecentProjects() {
       <div className="mb-10">
         <Heading FWord="RECENT" LWord="PROJECTS" />
       </div>
-      <a href="https://e-commerce-product-page-beta-sand.vercel.app/">
+      <a
+        href="https://e-commerce-product-page-beta-sand.vercel.app/"
+        target="_blank"
+      >
         <RecentProjectCard
           pic="project1.png"
           heading="Simple E-Commerce Page"
