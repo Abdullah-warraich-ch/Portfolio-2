@@ -21,11 +21,17 @@ function RecentProjects() {
         />
       </a>
 
-      <RecentProjectCard
-        pic="https://cdn.sanity.io/images/599r6htc/regionalized/1f5848c2e38f2b9c8a5563e4f672c60e8ae97b57-2400x2400.png?w=2400&h=2400&q=75&fit=max&auto=format"
-        heading="Task Management Dashboard"
-        discr="Made A Task Management Dashboard for Practice"
-      />
+      <a
+        href="https://quiz-sooty-sigma-47.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <RecentProjectCard
+          pic="project2.png"
+          heading="Quiz App"
+          discr="A Simple Quiz Application"
+        />
+      </a>
 
       <RecentProjectCard
         pic="https://i.pinimg.com/736x/6f/46/55/6f465503a2a317f965dbdbe3f72f1a77.jpg"
