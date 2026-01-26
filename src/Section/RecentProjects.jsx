@@ -22,7 +22,7 @@ function RecentProjects() {
       </a>
 
       <a
-        href="https://quiz-sooty-sigma-47.vercel.app/"
+        href="https://quiz-d7129dioh-abdullah-warraich-chs-projects.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
       >
