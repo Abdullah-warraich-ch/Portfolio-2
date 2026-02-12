@@ -33,11 +33,17 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
         />
       </a>
 
-      <RecentProjectCard
-        pic="https://i.pinimg.com/736x/6f/46/55/6f465503a2a317f965dbdbe3f72f1a77.jpg"
-        heading="Admin Style Ui Section"
-        discr="Worked on Different Ui Section of Company's Landing Page"
-      />
+      <a
+        href="https://university-portal-rouge.vercel.app/admin"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <RecentProjectCard
+          pic="image.png"
+          heading="University Portal"
+          discr="VU University Portal (In Progress)"
+        />
+      </a>
     </section>
   );
 });

@@ -31,8 +31,16 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const sectionRefs = [introRef, projectsRef, experienceRef, skillsRef, contactRef];
-    const elements = sectionRefs.map((sectionRef) => sectionRef.current).filter(Boolean);
+    const sectionRefs = [
+      introRef,
+      projectsRef,
+      experienceRef,
+      skillsRef,
+      contactRef,
+    ];
+    const elements = sectionRefs
+      .map((sectionRef) => sectionRef.current)
+      .filter(Boolean);
     if (!elements.length) return;
 
     elements.forEach((element, index) => {
@@ -48,7 +56,7 @@ function App() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     elements.forEach((element) => observer.observe(element));
@@ -58,7 +66,7 @@ function App() {
   return (
     <div className="flex flex-col lg:items-center">
       <div
-        className={`relative z-50 px-4 pt-4 flex justify-center lg:pt-0 lg:fixed lg:transition-all lg:duration-500 lg:ease-out lg:left-0 lg:w-full ${
+        className={`relative z-50 px-4 pt-4 flex justify-center lg:pt-0 lg:fixed lg:transition-all lg:duration-500 lg:ease-out lg:left-0 lg:w-1/4 ${
           isNavDocked
             ? "lg:left-auto lg:right-6 lg:top-1/2 lg:w-auto lg:px-0 lg:justify-end lg:-translate-y-1/2"
             : "lg:top-4 lg:left-0 lg:right-0 lg:w-full lg:px-4 lg:justify-center lg:translate-y-0"

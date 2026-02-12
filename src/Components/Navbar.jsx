@@ -17,8 +17,8 @@ function Navbar({
 
   return (
     <nav
-      className={`nav-dock-animate text-2xl lg:text-xl text-white gap-4 bg-secondary/95 backdrop-blur-sm h-auto flex items-center pl-5 pr-5 pt-1 pb-1 rounded-2xl w-auto border border-white/10 shadow-lg ${
-        isDocked ? "flex-row lg:flex-col" : "flex-row"
+      className={`nav-dock-animate text-2xl lg:text-xl text-white gap-4 bg-secondary/95 backdrop-blur-sm h-auto flex items-center pl-5 pr-5 pt-1 pb-1 rounded-2xl border border-white/10 shadow-lg ${
+        isDocked ? "flex-row lg:flex-col  w-15" : "flex-row w-auto"
       }`}
     >
       <button
