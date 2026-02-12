@@ -2,9 +2,9 @@ import React from "react";
 import Heading from "../Components/Heading";
 import ExperienceCard from "../Components/ExperienceCard";
 
-function Experience() {
+const Experience = React.forwardRef(function Experience(props, ref) {
   return (
-    <div>
+    <section ref={ref} className="scroll-mt-28">
       <div>
         <Heading FWord="RELEVANT" LWord="EXPERIENCE" />
       </div>
@@ -20,8 +20,8 @@ function Experience() {
           date="June 15, 2025 – Dec 21, 2025"
         />
       </div>
-    </div>
+    </section>
   );
-}
+});
 
 export default Experience;

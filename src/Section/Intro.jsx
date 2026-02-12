@@ -8,9 +8,12 @@ import { CiLocationArrow1 } from "react-icons/ci";
 
 const Hstyle = "text-white font-bold text-3xl lg:text-5xl";
 
-function Intro() {
+const Intro = React.forwardRef(function Intro(props, ref) {
   return (
-    <div className="flex flex-col w-full gap-10 items-center md:items-start">
+    <section
+      ref={ref}
+      className="scroll-mt-28 flex flex-col w-full gap-10 items-center md:items-start"
+    >
       <div>
         <Heading FWord="SOFTWARE" LWord="ENGINEER" />
       </div>
@@ -65,8 +68,8 @@ function Intro() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+});
 
 export default Intro;

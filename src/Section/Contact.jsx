@@ -1,28 +1,34 @@
 import React from "react";
 import Heading from "../Components/Heading";
 
-function Contact() {
+const Contact = React.forwardRef(function Contact(props, ref) {
   const labelStyle = "text-gray-500 text-xs";
   const opStyle = "text-gray-500 text-xs";
   const inpStyle =
     " text-gray-500 text-xs bg-secondary p-2 rounded-lg placeholder-gray-500 border-1 outline-none border-transparent focus:border-orange-500 placeholder:text-xs ";
   return (
-    <div>
+    <section ref={ref} className="scroll-mt-28">
       <Heading FWord="LET'S WORK" LWord="TOGETHER" />
       <div>
         <div className="flex gap-3  flex-col">
           <div className="flex gap-0 justify-between">
             <div className="flex flex-col w-[48%] gap-2 ">
-              <label for="name" className={labelStyle}>
+              <label htmlFor="name" className={labelStyle}>
                 Name
               </label>
-              <input type="text" placeholder="Your Name" className={inpStyle} />
+              <input
+                id="name"
+                type="text"
+                placeholder="Your Name"
+                className={inpStyle}
+              />
             </div>
             <div className="flex flex-col w-[48%]  gap-2">
-              <label for="email" className={labelStyle}>
+              <label htmlFor="email" className={labelStyle}>
                 Email
               </label>
               <input
+                id="email"
                 type="text"
                 placeholder="Your Email"
                 className={inpStyle}
@@ -30,7 +36,7 @@ function Contact() {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <label for="Subject" className={labelStyle}>
+            <label htmlFor="subject" className={labelStyle}>
               Subject
             </label>
             <select
@@ -51,11 +57,11 @@ function Contact() {
             </select>
           </div>
           <div className="flex flex-col gap-2 ">
-            <label for="name" className={labelStyle}>
+            <label htmlFor="message" className={labelStyle}>
               Message
             </label>
             <textarea
-              type="textarea"
+              id="message"
               placeholder="Your Message"
               className={inpStyle}
               rows="8"
@@ -68,8 +74,8 @@ function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+});
 
 export default Contact;

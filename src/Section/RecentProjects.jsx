@@ -4,9 +4,9 @@ import Paragraph from "../Components/Paragraph";
 import { IoIosArrowForward } from "react-icons/io";
 import RecentProjectCard from "../Components/RecentProjectCard";
 
-function RecentProjects() {
+const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
   return (
-    <div>
+    <section ref={ref} className="scroll-mt-28">
       <div className="mb-10">
         <Heading FWord="RECENT" LWord="PROJECTS" />
       </div>
@@ -38,8 +38,8 @@ function RecentProjects() {
         heading="Admin Style Ui Section"
         discr="Worked on Different Ui Section of Company's Landing Page"
       />
-    </div>
+    </section>
   );
-}
+});
 
 export default RecentProjects;

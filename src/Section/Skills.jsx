@@ -7,9 +7,9 @@ import { RiNextjsLine } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoCss3 } from "react-icons/io5";
 
-function Skills() {
+const Skills = React.forwardRef(function Skills(props, ref) {
   return (
-    <div>
+    <section ref={ref} className="scroll-mt-28">
       <div className="mb-10">
         <Heading FWord="TECHNICAL" LWord="SKILLS" />
       </div>
@@ -47,8 +47,8 @@ function Skills() {
           disc="Responsive styling"
         />
       </div>
-    </div>
+    </section>
   );
-}
+});
 
 export default Skills;
