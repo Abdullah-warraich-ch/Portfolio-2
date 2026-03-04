@@ -30,9 +30,9 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
             heading="Simple E-Commerce Page"
             discr="Product Listing + Add to Cart"
             tags={[
-              <div className="flex items-center gap-1.5"><FaReact className={iconStyle} /> React</div>,
-              <div className="flex items-center gap-1.5"><RiTailwindCssFill className={iconStyle} /> Tailwind</div>,
-              <div className="flex items-center gap-1.5"><SiJavascript className={iconStyle} /> JavaScript</div>
+              <div className="flex items-center gap-1.5"><FaReact color="#61DAFB" /> React</div>,
+              <div className="flex items-center gap-1.5"><RiTailwindCssFill color="#06B6D4" /> Tailwind</div>,
+              <div className="flex items-center gap-1.5"><SiJavascript color="#F7DF1E" /> JS</div>
             ]}
           />
         </a>
@@ -48,9 +48,9 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
             heading="Quiz App"
             discr="A Simple Quiz Application"
             tags={[
-              <div title="Firebase" className="text-xl px-1"><SiFirebase color="#FFCA28" /></div>,
-              <div title="React" className="text-xl px-1"><FaReact color="#61DAFB" /></div>,
-              <div title="Tailwind" className="text-xl px-1"><RiTailwindCssFill color="#06B6D4" /></div>
+              <div className="flex items-center gap-1.5"><SiFirebase color="#FFCA28" /> Firebase</div>,
+              <div className="flex items-center gap-1.5"><FaReact color="#61DAFB" /> React</div>,
+              <div className="flex items-center gap-1.5"><RiTailwindCssFill color="#06B6D4" /> Tailwind</div>
             ]}
           />
         </a>
@@ -66,9 +66,9 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
             heading="University Portal"
             discr="VU University Portal"
             tags={[
-              <div title="TypeScript" className="text-xl px-1"><SiTypescript color="#3178C6" /></div>,
-              <div title="React" className="text-xl px-1"><FaReact color="#61DAFB" /></div>,
-              <div title="Firebase" className="text-xl px-1"><SiFirebase color="#FFCA28" /></div>
+              <div className="flex items-center gap-1.5"><SiTypescript color="#3178C6" /> TypeScript</div>,
+              <div className="flex items-center gap-1.5"><FaReact color="#61DAFB" /> React</div>,
+              <div className="flex items-center gap-1.5"><SiFirebase color="#FFCA28" /> Firebase</div>
             ]}
           />
         </a>
