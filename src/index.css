@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
@@ -7,16 +6,56 @@
   --font-poppins: "Poppins", sans-serif;
   --font-inter: "Inter", sans-serif;
   --color-primary: #151312;
-  --color-secondary: #242426;
+  --color-secondary: #1e1c1b;
+  --color-accent: #f97316;
   --color-text: #e5e4e4;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #151312;
+  color: #e5e4e4;
+  -webkit-font-smoothing: antialiased;
 }
-* {
-  font-family: "Poppins", sans-serif;
+
+/* ── Pronounced Grain Overlay ── */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.08;
+  /* Slightly increased for better visibility */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 180px;
+  background-repeat: repeat;
 }
-/* div {
-  border: 1px solid red;
-} */
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #151312;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e2c2a;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(249, 115, 22, 0.25);
+  color: #fff;
+}

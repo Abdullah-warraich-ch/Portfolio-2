@@ -12,55 +12,31 @@ function Navbar({
   onSkillsClick,
   onContactClick,
 }) {
-  const itemClass =
-    "rounded p-2 transition duration-300 hover:bg-white hover:text-black hover:-translate-y-0.5 lg:hover:translate-x-1";
+  const navItems = [
+    { icon: GoHome, label: "Home", onClick: onHomeClick },
+    { icon: GoFileSubmodule, label: "Projects", onClick: onProjectsClick },
+    { icon: CgWorkAlt, label: "Experience", onClick: onExperienceClick },
+    { icon: GrTechnology, label: "Skills", onClick: onSkillsClick },
+    { icon: LuNotebookPen, label: "Contact", onClick: onContactClick },
+  ];
 
   return (
     <nav
-      className={`nav-dock-animate text-2xl lg:text-xl text-white gap-4 bg-secondary/95 backdrop-blur-sm h-auto flex items-center pl-5 pr-5 pt-1 pb-1 rounded-2xl border border-white/10 shadow-lg ${
-        isDocked ? "flex-row lg:flex-col  w-15" : "flex-row w-auto"
-      }`}
+      className={`nav-dock-animate text-2xl lg:text-xl text-white gap-2 bg-[#1a1816]/90 backdrop-blur-md h-auto flex items-center px-3 py-1.5 rounded-2xl border border-white/[0.08] shadow-xl ${isDocked ? "flex-row lg:flex-col w-auto" : "flex-row w-auto"
+        }`}
     >
-      <button
-        type="button"
-        onClick={onHomeClick}
-        aria-label="Go to Intro section"
-        className={itemClass}
-      >
-        <GoHome size={20} />
-      </button>
-      <button
-        type="button"
-        onClick={onProjectsClick}
-        aria-label="Go to Projects section"
-        className={itemClass}
-      >
-        <GoFileSubmodule size={20} />
-      </button>
-      <button
-        type="button"
-        onClick={onExperienceClick}
-        aria-label="Go to Experience section"
-        className={itemClass}
-      >
-        <CgWorkAlt size={20} />
-      </button>
-      <button
-        type="button"
-        onClick={onSkillsClick}
-        aria-label="Go to Skills section"
-        className={itemClass}
-      >
-        <GrTechnology size={20} />
-      </button>
-      <button
-        type="button"
-        onClick={onContactClick}
-        aria-label="Go to Contact section"
-        className={itemClass}
-      >
-        <LuNotebookPen size={20} />
-      </button>
+      {navItems.map(({ icon: Icon, label, onClick }, i) => (
+        <button
+          key={i}
+          type="button"
+          onClick={onClick}
+          aria-label={`Go to ${label} section`}
+          title={label}
+          className="group relative rounded-xl p-2.5 text-white transition-all duration-300 hover:bg-orange-500 hover:text-white hover:-translate-y-0.5 active:scale-90"
+        >
+          <Icon size={20} className="transition-transform duration-300 group-hover:scale-110" />
+        </button>
+      ))}
     </nav>
   );
 }
