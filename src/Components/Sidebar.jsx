@@ -56,10 +56,12 @@ function Sidebar() {
       </div>
 
       {/* Download CV — white default, orange on hover */}
-      <a href="/Abdullah's_CV.pdf" download className="text-center w-full bg-white text-black font-semibold py-3 rounded-xl hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg active:scale-95">
-        <button >
-          Download CV
-        </button>
+      <a
+        href="/Abdullah's_CV.pdf"
+        download
+        className="text-center w-full bg-white text-black font-semibold py-3 rounded-xl hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg active:scale-95 block uppercase tracking-widest text-sm"
+      >
+        Download CV
       </a>
     </div>
   );

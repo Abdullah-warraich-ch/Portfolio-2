@@ -11,6 +11,7 @@ const Intro = React.forwardRef(function Intro(props, ref) {
   return (
     <section
       ref={ref}
+      data-name="Intro"
       className="scroll-mt-28 flex flex-col w-full gap-10 items-center md:items-start"
     >
       <div>

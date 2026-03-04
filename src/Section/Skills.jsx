@@ -20,7 +20,7 @@ const skills = [
 
 const Skills = React.forwardRef(function Skills(props, ref) {
   return (
-    <section ref={ref} className="scroll-mt-28">
+    <section ref={ref} data-name="Skills" className="scroll-mt-28">
       <div className="mb-8">
         <Heading FWord="TECHNICAL" LWord="SKILLS" />
       </div>

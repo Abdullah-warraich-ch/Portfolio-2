@@ -4,7 +4,7 @@ import ExperienceCard from "../Components/ExperienceCard";
 
 const Experience = React.forwardRef(function Experience(props, ref) {
   return (
-    <section ref={ref} className="scroll-mt-28">
+    <section ref={ref} data-name="Experience" className="scroll-mt-28">
       <div>
         <Heading FWord="RELEVANT" LWord="EXPERIENCE" />
       </div>

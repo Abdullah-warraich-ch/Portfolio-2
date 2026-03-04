@@ -11,6 +11,7 @@ import Footer from "./Section/Footer";
 
 function App() {
   const [isNavDocked, setIsNavDocked] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const introRef = useRef(null);
   const projectsRef = useRef(null);
   const experienceRef = useRef(null);
@@ -53,10 +54,22 @@ function App() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
+            // Logic for Navbar active state
+            const idMap = {
+              "Intro": "home",
+              "RecentProjects": "projects",
+              "Experience": "experience",
+              "Skills": "skills",
+              "Contact": "contact"
+            };
+            const componentName = entry.target.tagName === 'SECTION' ? entry.target.getAttribute('data-name') : '';
+            if (idMap[componentName]) {
+              setActiveSection(idMap[componentName]);
+            }
           }
         });
       },
-      { threshold: 0.2 },
+      { threshold: 0.3 }
     );
 
     elements.forEach((element) => observer.observe(element));
@@ -66,14 +79,14 @@ function App() {
   return (
     <div className="flex flex-col lg:items-center">
       <div
-        className={`relative z-50 px-4 pt-4 flex justify-center lg:pt-0 lg:fixed lg:transition-all lg:duration-500 lg:ease-out lg:left-0 lg:w-1/4 ${
-          isNavDocked
+        className={`relative z-50 px-4 pt-4 flex justify-center lg:pt-0 lg:fixed lg:transition-all lg:duration-500 lg:ease-out lg:left-0 lg:w-1/4 ${isNavDocked
             ? "lg:left-auto lg:right-6 lg:top-1/2 lg:w-auto lg:px-0 lg:justify-end lg:-translate-y-1/2"
             : "lg:top-4 lg:left-0 lg:right-0 lg:w-full lg:px-4 lg:justify-center lg:translate-y-0"
-        }`}
+          }`}
       >
         <Navbar
           isDocked={isNavDocked}
+          activeSection={activeSection}
           onHomeClick={() => scrollToSection(introRef)}
           onProjectsClick={() => scrollToSection(projectsRef)}
           onExperienceClick={() => scrollToSection(experienceRef)}
