@@ -23,7 +23,7 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
         <a
           href="https://e-commerce-product-page-beta-sand.vercel.app/"
           target="_blank"
-          className="relative z-10"
+          className="relative z-10 block"
         >
           <RecentProjectCard
             pic="project1.png"
@@ -41,7 +41,7 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
           href="https://quiz-d7129dioh-abdullah-warraich-chs-projects.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative z-10"
+          className="relative z-10 block"
         >
           <RecentProjectCard
             pic="project2.png"
@@ -59,7 +59,7 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
           href="https://university-portal-rouge.vercel.app/admin"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative z-10"
+          className="relative z-10 block"
         >
           <RecentProjectCard
             pic="image.png"
