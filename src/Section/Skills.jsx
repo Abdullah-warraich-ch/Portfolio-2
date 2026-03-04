@@ -24,7 +24,7 @@ const Skills = React.forwardRef(function Skills(props, ref) {
       <div className="mb-8">
         <Heading FWord="TECHNICAL" LWord="SKILLS" />
       </div>
-      <div className="grid lg:grid-cols-2 gap-3">
+      <div className="grid lg:grid-cols-2 gap-3 stagger-reveal">
         {skills.map((skill, i) => (
           <SkillCard key={i} {...skill} />
         ))}

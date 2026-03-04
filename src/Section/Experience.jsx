@@ -8,7 +8,7 @@ const Experience = React.forwardRef(function Experience(props, ref) {
       <div>
         <Heading FWord="RELEVANT" LWord="EXPERIENCE" />
       </div>
-      <div className="mt-10">
+      <div className="mt-10 stagger-reveal">
         <ExperienceCard
           heading="React JS Intern"
           para="Currently working as a Frontend Intern at a software house, contributing to the development of responsive user interfaces using HTML, CSS, JavaScript, and React."

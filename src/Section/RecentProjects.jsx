@@ -16,7 +16,7 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
         <Heading FWord="RECENT" LWord="PROJECTS" />
       </div>
 
-      <div className="flex flex-col gap-2 relative">
+      <div className="flex flex-col gap-2 relative stagger-reveal">
         {/* Vertical connector line */}
         <div className="absolute left-10 md:left-12 top-0 bottom-0 w-px bg-white/[0.03] z-0 hidden lg:block" />
 
