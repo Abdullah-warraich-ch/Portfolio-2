@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Heading from "../Components/Heading";
-import Paragraph from "../Components/Paragraph";
 import { IoIosArrowForward } from "react-icons/io";
-import { FaReact, FaNodeJs, FaBootstrap, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
-import { SiFirebase, SiTypescript, SiJavascript, SiRedux, SiPostgresql } from "react-icons/si";
 import RecentProjectCard from "../Components/RecentProjectCard";
+import { projects } from "../data/projects";
 
 const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
-  const iconStyle = "text-lg";
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  const showMoreProjects = () => {
+    setVisibleCount((prevCount) => prevCount + 3);
+  };
+
+  const hasMore = visibleCount < projects.length;
 
   return (
     <section ref={ref} data-name="RecentProjects" className="scroll-mt-28 flex flex-col gap-10">
@@ -20,61 +23,45 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
         {/* Vertical connector line */}
         <div className="absolute left-10 md:left-12 top-0 bottom-0 w-px bg-white/[0.03] z-0 hidden lg:block" />
 
-        <a
-          href="https://e-commerce-product-page-beta-sand.vercel.app/"
-          target="_blank"
-          className="relative z-10 block"
-        >
-          <RecentProjectCard
-            pic="project1.png"
-            heading="Simple E-Commerce Page"
-            discr="Product Listing + Add to Cart"
-            tags={[
-              <div className="flex items-center gap-1.5"><FaReact color="#61DAFB" /> React</div>,
-              <div className="flex items-center gap-1.5"><RiTailwindCssFill color="#06B6D4" /> Tailwind</div>,
-              <div className="flex items-center gap-1.5"><SiJavascript color="#F7DF1E" /> JS</div>
-            ]}
-          />
-        </a>
-
-        <a
-          href="https://quiz-d7129dioh-abdullah-warraich-chs-projects.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative z-10 block"
-        >
-          <RecentProjectCard
-            pic="project2.png"
-            heading="Quiz App"
-            discr="A Simple Quiz Application"
-            tags={[
-              <div className="flex items-center gap-1.5"><SiFirebase color="#FFCA28" /> Firebase</div>,
-              <div className="flex items-center gap-1.5"><FaReact color="#61DAFB" /> React</div>,
-              <div className="flex items-center gap-1.5"><RiTailwindCssFill color="#06B6D4" /> Tailwind</div>
-            ]}
-          />
-        </a>
-
-        <a
-          href="https://university-portal-rouge.vercel.app/admin"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative z-10 block"
-        >
-          <RecentProjectCard
-            pic="image.png"
-            heading="University Portal"
-            discr="VU University Portal"
-            tags={[
-              <div className="flex items-center gap-1.5"><SiTypescript color="#3178C6" /> TypeScript</div>,
-              <div className="flex items-center gap-1.5"><FaReact color="#61DAFB" /> React</div>,
-              <div className="flex items-center gap-1.5"><SiFirebase color="#FFCA28" /> Firebase</div>
-            ]}
-          />
-        </a>
+        {projects.slice(0, visibleCount).map((project) => (
+          <a
+            key={project.id}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative z-10 block"
+          >
+            <RecentProjectCard
+              pic={project.pic}
+              heading={project.heading}
+              discr={project.discr}
+              tags={project.tags.map((tag) => (
+                <div key={tag.name} className="flex items-center gap-1.5">
+                  {tag.icon} {tag.name}
+                </div>
+              ))}
+            />
+          </a>
+        ))}
       </div>
+
+      {hasMore && (
+        <div className="flex justify-center mt-4">
+          <button
+            onClick={showMoreProjects}
+            className="group relative px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-bold tracking-widest uppercase text-xs overflow-hidden transition-all duration-500 hover:border-orange-500/50 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] active:scale-95"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              View All Projects
+              <IoIosArrowForward className="transition-transform duration-500 group-hover:translate-x-1" />
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-orange-500/10 to-orange-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+          </button>
+        </div>
+      )}
     </section>
   );
 });
 
 export default RecentProjects;
+
