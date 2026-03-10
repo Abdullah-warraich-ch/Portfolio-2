@@ -55,8 +55,8 @@ export const projects = [
   // Placeholders for future projects
   {
     id: 4,
-    link: "#",
-    pic: "project1.png",
+    link: "https://ramadan-time-two.vercel.app/",
+    pic: "ramadan.png",
     heading: "Ramadan Time",
     discr: "GPS-powered Ramadan companion app.",
     tags: [
