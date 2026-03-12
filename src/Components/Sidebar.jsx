@@ -13,7 +13,7 @@ function Sidebar() {
       {/* Full image — no cropping */}
       <div className="relative group w-full overflow-hidden rounded-2xl">
         <img
-          src="Media.jpeg"
+          src="Media.jpg"
           alt="Abdullah"
           className="w-full rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.03]"
         />
