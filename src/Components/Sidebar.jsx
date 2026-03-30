@@ -3,8 +3,16 @@ import { FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 
 const socialLinks = [
-  { Icon: FaGithub, href: "https://github.com/Abdullah-warraich-ch", hoverColor: "#e6edf3" },
-  { Icon: CiLinkedin, href: "https://www.linkedin.com/in/muhammad-abdullah-949b26195/", hoverColor: "#0A66C2" },
+  {
+    Icon: FaGithub,
+    href: "https://github.com/Abdullah-warraich-ch",
+    hoverColor: "#e6edf3",
+  },
+  {
+    Icon: CiLinkedin,
+    href: "https://www.linkedin.com/in/muhammad-abdullah-949b26195/",
+    hoverColor: "#0A66C2",
+  },
 ];
 
 function Sidebar() {
@@ -32,8 +40,8 @@ function Sidebar() {
       {/* Bio */}
       <div className="lg:mt-2">
         <p className="font-medium leading-7 text-gray-500 text-center text-xl">
-          A <span className="text-white/80">Software Engineer</span> who has developed
-          countless innovative solutions.
+          A <span className="text-white/80">Software Engineer</span> who has
+          developed countless innovative solutions.
         </p>
       </div>
 
@@ -43,7 +51,7 @@ function Sidebar() {
           <a
             key={i}
             href={href}
-            aria-label={`Visit my ${href.includes('github') ? 'GitHub' : 'LinkedIn'}`}
+            aria-label={`Visit my ${href.includes("github") ? "GitHub" : "LinkedIn"}`}
             target="_blank"
             rel="noopener noreferrer"
             className="transition-all duration-200 hover:scale-110"
@@ -57,7 +65,7 @@ function Sidebar() {
 
       {/* Download CV — white default, orange on hover */}
       <a
-        href="/Abdullah's_CV.pdf"
+        href="/Muhammad_Abdullah.pdf"
         download
         className="text-center w-full bg-white text-black font-semibold py-3 rounded-xl hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg active:scale-95 block uppercase tracking-widest text-sm"
       >
