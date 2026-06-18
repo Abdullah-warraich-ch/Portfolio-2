@@ -15,7 +15,7 @@ const Intro = React.forwardRef(function Intro(props, ref) {
       className="scroll-mt-28 flex flex-col w-full gap-8 md:gap-10 items-center md:items-start pt-16 md:pt-0"
     >
       <div>
-        <Heading FWord="SOFTWARE" LWord="ENGINEER" />
+        <Heading FWord="WORDPRESS" LWord="DEVELOPER" />
       </div>
 
       <div className="md:pr-20 lg:pr-45 text-center md:text-left">
@@ -67,7 +67,7 @@ const Intro = React.forwardRef(function Intro(props, ref) {
 
         {/* Dev card */}
         <div className="group relative overflow-hidden h-72 w-full md:w-[55%] bg-[#1c1b19]/40 backdrop-blur-xl border border-white/[0.05] rounded-[2rem] p-10 flex flex-col justify-between transition-all duration-500 hover:border-green-400/40 hover:bg-green-400/[0.03] hover:shadow-[0_20px_40px_-15px_rgba(74,222,128,0.15)]">
-          <div className="absolute -right-8 -top-8 w-40 h-40 bg-green-400/10 rounded-full blur-[60px] group-hover:bg-green-400/20 transition-all duration-700 animate-float delay-1000"></div>
+          <div className="absolute -right-8 -top-8 w-40 h-40 bg-green-400/10 rounded-full blur-[60px] group-hover:bg-green-400/20 transition-all duration-700 animate-float [animation-delay:1000ms]"></div>
 
           <div className="p-4 bg-green-400/10 rounded-2xl w-fit border border-green-400/20 text-green-500 group-hover:bg-green-400 group-hover:text-black transition-all duration-500">
             <FaCode size={32} />
