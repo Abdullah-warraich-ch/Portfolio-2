@@ -15,7 +15,7 @@ const Intro = React.forwardRef(function Intro(props, ref) {
       className="scroll-mt-28 flex flex-col w-full gap-8 md:gap-10 items-center md:items-start pt-16 md:pt-0"
     >
       <div>
-        <Heading FWord="SOFTWARE" LWord="ENGINEER" />
+        <Heading FWord="WORDPRESS" LWord="DEVELOPER" />
       </div>
 
       <div className="md:pr-20 lg:pr-45 text-center md:text-left">
