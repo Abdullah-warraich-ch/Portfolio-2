@@ -8,7 +8,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
   const opStyle = "text-gray-400 text-xs bg-[#1e1c1b]";
 
   return (
-    <section ref={ref} className="scroll-mt-28">
+    <section ref={ref} data-name="Contact" className="scroll-mt-28">
       <div className="mb-10">
         <Heading FWord="LET'S WORK" LWord="TOGETHER" />
       </div>
