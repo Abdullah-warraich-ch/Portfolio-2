@@ -137,3 +137,68 @@
   opacity: 1;
   transition: opacity 400ms ease-out;
 }
+
+/* ── Animated Eye Icon Styles ── */
+.animated-eye-lid {
+  transform-origin: 12px 12px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.animated-eye-pupil {
+  transform-origin: 12px 12px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Trigger animation when parent element (with .group) is hovered */
+.group:hover .animated-eye-lid {
+  animation: eye-blink 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.group:hover .animated-eye-pupil {
+  animation: pupil-move 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Eye Eyelid Blink Animation */
+@keyframes eye-blink {
+  0%, 20%, 40%, 70%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  30%, 80% {
+    transform: scaleY(0.15);
+  }
+}
+
+/* Pupil Look-around and Scale Animation */
+@keyframes pupil-move {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  /* Look left */
+  10% {
+    transform: translate(-2.5px, 0) scale(1.05);
+  }
+  /* Look right */
+  20% {
+    transform: translate(2.5px, 0) scale(1.05);
+  }
+  /* Blink (shrink pupil) */
+  30% {
+    transform: translate(0, 0) scale(0.15);
+  }
+  /* Back to center */
+  40% {
+    transform: translate(0, 0) scale(1);
+  }
+  /* Look up-right */
+  55% {
+    transform: translate(1.5px, -1.5px) scale(0.95);
+  }
+  /* Look down-left */
+  65% {
+    transform: translate(-1.5px, 1.5px) scale(0.95);
+  }
+  /* Second Blink */
+  80% {
+    transform: translate(0, 0) scale(0.15);
+  }
+}

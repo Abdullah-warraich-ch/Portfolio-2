@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
+import AnimatedEye from "./AnimatedEye";
 
 const socialLinks = [
   {
@@ -87,7 +88,10 @@ function Sidebar() {
           download
           className="relative overflow-hidden group text-center w-full bg-white text-black font-semibold py-3 rounded-xl hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg active:scale-95 block uppercase tracking-widest text-sm"
         >
-          <span className="relative z-10">Download CV</span>
+          <span className="relative z-10 flex items-center justify-center gap-2">
+            Download CV
+            <AnimatedEye size={20} className="text-black group-hover:text-white transition-colors duration-300" />
+          </span>
           <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-white/20 to-orange-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
         </a>
       </div>

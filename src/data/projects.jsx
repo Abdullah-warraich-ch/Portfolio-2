@@ -19,6 +19,18 @@ import React from "react";
 export const projects = [
   {
     id: 1,
+    link: "https://ustaad-ai.vercel.app/",
+    pic: "ustaad.png",
+    heading: "Ustaad",
+    discr: "AI Tutor Finder",
+    tags: [
+      { name: "React", icon: <FaReact color="#61DAFB" /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill color="#06B6D4" /> },
+      { name: "Node", icon: <FaNodeJs color="#339933" /> },
+    ],
+  },
+  {
+    id: 2,
     link: "https://rehloo.vercel.app/",
     pic: "rehloo.png",
     heading: "Rehloo, Find A Hostel",
@@ -30,7 +42,7 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     link: "https://quiz-sooty-sigma-47.vercel.app/homepage",
     pic: "project2.png",
     heading: "Quiz App",
@@ -42,7 +54,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     link: "https://university-portal-rouge.vercel.app/admin",
     pic: "image.png",
     heading: "University Portal",
@@ -55,7 +67,7 @@ export const projects = [
   },
   // Placeholders for future projects
   {
-    id: 4,
+    id: 5,
     link: "https://ramadan-time-two.vercel.app/",
     pic: "ramadan.png",
     heading: "Ramadan Time",
@@ -66,7 +78,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     link: "https://e-commerce-product-page-beta-sand.vercel.app/",
     pic: "project1.png",
     heading: "Simple E-Commerce Page",
