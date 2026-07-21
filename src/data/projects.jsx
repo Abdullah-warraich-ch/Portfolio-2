@@ -19,7 +19,7 @@ import React from "react";
 export const projects = [
   {
     id: 1,
-    link: "https://ustaad-ai.vercel.app/",
+    link: "https://ustaad-ai-tutor-finder.vercel.app/",
     pic: "ustaad.png",
     heading: "Ustaad",
     discr: "AI Tutor Finder",
