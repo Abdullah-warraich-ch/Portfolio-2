@@ -8,6 +8,7 @@ import Experience from "./Section/Experience";
 import Skills from "./Section/Skills";
 import Contact from "./Section/Contact";
 import Footer from "./Section/Footer";
+import GradualBlur from "./Components/GradualBlur";
 
 function App() {
   const [isNavDocked, setIsNavDocked] = useState(false);
@@ -77,7 +78,18 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col lg:items-center">
+    <div className="flex flex-col lg:items-center relative min-h-screen">
+      {/* Top gradual blur for smooth page header overlay */}
+      <GradualBlur
+        target="page"
+        position="top"
+        height="5rem"
+        strength={1.5}
+        divCount={5}
+        curve="bezier"
+        zIndex={40}
+      />
+
       <div
         className={`relative z-50 px-4 pt-2 flex justify-center lg:pt-0 lg:fixed lg:transition-all lg:duration-500 lg:ease-out lg:left-0 lg:w-1/4 ${isNavDocked
           ? "lg:left-auto lg:right-6 lg:top-1/2 lg:w-auto lg:px-0 lg:justify-end lg:-translate-y-1/2"
@@ -109,6 +121,17 @@ function App() {
       <div>
         <Footer />
       </div>
+
+      {/* Bottom gradual blur for smooth page footer overlay */}
+      <GradualBlur
+        target="page"
+        position="bottom"
+        height="4rem"
+        strength={1.5}
+        divCount={5}
+        curve="bezier"
+        zIndex={40}
+      />
     </div>
   );
 }
