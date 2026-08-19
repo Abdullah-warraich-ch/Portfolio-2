@@ -79,16 +79,6 @@ function App() {
 
   return (
     <div className="flex flex-col lg:items-center relative min-h-screen">
-      {/* Top gradual blur for smooth page header overlay */}
-      <GradualBlur
-        target="page"
-        position="top"
-        height="5rem"
-        strength={1.5}
-        divCount={5}
-        curve="bezier"
-        zIndex={40}
-      />
 
       <div
         className={`relative z-50 px-4 pt-2 flex justify-center lg:pt-0 lg:fixed lg:transition-all lg:duration-500 lg:ease-out lg:left-0 lg:w-1/4 ${isNavDocked

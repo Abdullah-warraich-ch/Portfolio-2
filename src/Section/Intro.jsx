@@ -52,8 +52,7 @@ const Intro = React.forwardRef(function Intro(props, ref) {
           </div>
 
           <div className="relative z-10">
-            <h3 className="text-gray-500 text-sm font-semibold tracking-widest uppercase mb-2">Design Stack</h3>
-            <h1 className="text-white font-bold text-2xl leading-tight">
+            <h1 className="text-white font-bold text-[1.3rem] pt-2 leading-tight">
               Figma, PhotoShop <br /> & Canva Specialist
             </h1>
           </div>
@@ -74,8 +73,7 @@ const Intro = React.forwardRef(function Intro(props, ref) {
           </div>
 
           <div className="relative z-10">
-            <h3 className="text-gray-500 text-sm font-semibold tracking-widest uppercase mb-2">Development Stack</h3>
-            <h1 className="text-white font-bold text-2xl leading-tight">
+            <h1 className="text-white font-bold text-[1.3rem] pt-2 leading-tight">
               React, Next, Tailwind, <br /> Bootstrap & JQuery
             </h1>
           </div>

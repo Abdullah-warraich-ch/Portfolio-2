@@ -35,11 +35,7 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
               pic={project.pic}
               heading={project.heading}
               discr={project.discr}
-              tags={project.tags.map((tag) => (
-                <div key={tag.name} className="flex items-center gap-1.5">
-                  {tag.icon} {tag.name}
-                </div>
-              ))}
+              tags={project.tags}
             />
           </a>
         ))}
