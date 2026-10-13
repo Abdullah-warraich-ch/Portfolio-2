@@ -39,7 +39,7 @@ function Sidebar() {
             loading="eager"
             fetchpriority="high"
             onLoad={() => setImgLoaded(true)}
-            className={`w-full h-full object-cover rounded-2xl shadow-md transition-all duration-500 group-hover:scale-[1.03] ${
+            className={`w-full h-full object-cover rounded-2xl shadow-md transition-all duration-500 ${
               imgLoaded ? "sidebar-img-visible" : "sidebar-img-hidden"
             }`}
           />
