@@ -6,10 +6,10 @@ const Contact = React.forwardRef(function Contact(props, ref) {
   const [status, setStatus] = useState("idle"); // "idle" | "submitting" | "success" | "error"
   const [errorMessage, setErrorMessage] = useState("");
 
-  const labelStyle = "text-gray-400 text-xs font-medium tracking-wide";
+  const labelStyle = "text-slate-700 text-xs font-semibold tracking-wide";
   const inpStyle =
-    "w-full text-gray-300 text-sm bg-[#1e1c1b] p-2.5 rounded-lg placeholder-gray-600 border border-white/[0.07] outline-none focus:border-orange-500/60 focus:bg-[#252321] transition-all duration-200 placeholder:text-xs";
-  const opStyle = "text-gray-400 text-xs bg-[#1e1c1b]";
+    "w-full text-slate-800 text-sm bg-slate-50 p-3 rounded-xl placeholder-slate-400 border border-slate-200 outline-none focus:border-orange-500 focus:bg-white focus:ring-2 focus:ring-orange-500/20 transition-all duration-200 placeholder:text-xs";
+  const opStyle = "text-slate-700 text-xs bg-white";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,7 +50,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
         <Heading FWord="LET'S WORK" LWord="TOGETHER" />
       </div>
 
-      <div className="bg-[#1c1b19]/40 backdrop-blur-xl border border-white/[0.05] p-8 md:p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+      <div className="bg-white/80 backdrop-blur-xl border border-slate-200/80 p-8 md:p-12 rounded-[2.5rem] shadow-xl shadow-slate-200/50 relative overflow-hidden group">
         {/* Decorative background glow */}
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-orange-500/5 rounded-full blur-[80px] group-hover:bg-orange-500/10 transition-all duration-700"></div>
         <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-orange-500/5 rounded-full blur-[80px] group-hover:bg-orange-500/10 transition-all duration-700"></div>
@@ -60,16 +60,16 @@ const Contact = React.forwardRef(function Contact(props, ref) {
             <div className="h-16 w-16 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-500 mb-2">
               <FiCheckCircle size={36} />
             </div>
-            <h3 className="text-white text-2xl font-bold tracking-tight">
+            <h3 className="text-slate-900 text-2xl font-bold tracking-tight">
               Message Received!
             </h3>
-            <p className="text-gray-400 max-w-md text-sm sm:text-base leading-relaxed">
+            <p className="text-slate-600 max-w-md text-sm sm:text-base leading-relaxed">
               Thank you for reaching out. Your message has been sent successfully, and I will get back to you shortly.
             </p>
             <button
               type="button"
               onClick={() => setStatus("idle")}
-              className="mt-4 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-semibold uppercase tracking-wider hover:bg-orange-500 hover:border-orange-500 transition-all duration-300"
+              className="mt-4 px-6 py-2.5 rounded-full bg-slate-900 text-white text-xs font-semibold uppercase tracking-wider hover:bg-orange-500 transition-all duration-300 shadow-sm"
             >
               Send Another Message
             </button>
@@ -77,6 +77,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-6 relative z-10">
             <input type="hidden" name="access_key" value="8d23d4b1-cdb1-49b8-a7b9-2fc9a473e18d" />
+            <input type="hidden" name="from_name" value="Portfolio Website" />
 
             {/* Name + Email row */}
             <div className="flex flex-col md:flex-row gap-6">
@@ -104,7 +105,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
                   <option value="job" className={opStyle}>Job Opportunity</option>
                   <option value="hi" className={opStyle}>Just Saying Hi!</option>
                 </select>
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M7.247 11.14 2.451 5.658C2.185 5.355 2.403 5 2.808 5h10.384a.207.207 0 0 1 .173.344l-4.796 5.482a.25.25 0 0 1-.397 0z" />
                   </svg>
@@ -127,7 +128,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
 
             {/* Error banner */}
             {status === "error" && (
-              <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-xs">
+              <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-red-600 text-xs">
                 {errorMessage}
               </div>
             )}
@@ -137,7 +138,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="w-full bg-white text-black font-bold py-4 rounded-2xl text-lg tracking-widest uppercase hover:bg-orange-500 hover:text-white transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(255,255,255,0.2)] hover:shadow-orange-500/30 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-slate-900 text-white font-bold py-4 rounded-2xl text-lg tracking-widest uppercase hover:bg-orange-500 transition-all duration-500 shadow-lg shadow-slate-900/10 hover:shadow-orange-500/20 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {status === "submitting" ? (
                   <>

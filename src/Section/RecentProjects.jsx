@@ -21,7 +21,7 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
 
       <div className="flex flex-col gap-2 relative stagger-reveal">
         {/* Vertical connector line */}
-        <div className="absolute left-10 md:left-12 top-0 bottom-0 w-px bg-white/[0.03] z-0 hidden lg:block" />
+        <div className="absolute left-10 md:left-12 top-0 bottom-0 w-px bg-slate-200 z-0 hidden lg:block" />
 
         {projects.slice(0, visibleCount).map((project) => (
           <a
@@ -45,7 +45,7 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
         <div className="flex justify-center mt-4">
           <button
             onClick={showMoreProjects}
-            className="group relative px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-bold tracking-widest uppercase text-xs overflow-hidden transition-all duration-500 hover:border-orange-500/50 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] active:scale-95"
+            className="group relative px-8 py-3 rounded-full bg-white border border-slate-200 text-slate-800 font-bold tracking-widest uppercase text-xs overflow-hidden transition-all duration-500 hover:border-orange-500/50 hover:bg-orange-500 hover:text-white shadow-md active:scale-95"
           >
             <span className="relative z-10 flex items-center gap-2">
               View All Projects

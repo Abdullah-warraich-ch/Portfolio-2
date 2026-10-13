@@ -14,35 +14,35 @@ function RecentProjectCard({ pic, heading, discr, tags = [] }) {
   return (
     <div
       onMouseMove={handleMouseMove}
-      className="group relative flex flex-col sm:flex-row p-4 sm:p-6 rounded-2xl sm:rounded-3xl gap-5 sm:gap-7 items-start sm:items-center border border-white/[0.06] bg-[#181715]/40 backdrop-blur-xl transition-all duration-500 hover:bg-[#1e1d1a]/70 hover:border-orange-500/30 hover:shadow-[0_20px_50px_-15px_rgba(249,115,22,0.12)] cursor-pointer mb-4 overflow-hidden"
+      className="group relative flex flex-col sm:flex-row p-4 sm:p-6 rounded-2xl sm:rounded-3xl gap-5 sm:gap-7 items-start sm:items-center border border-slate-200/80 bg-white/80 backdrop-blur-xl transition-all duration-500 hover:bg-white hover:border-orange-500/40 hover:shadow-xl hover:shadow-orange-500/10 cursor-pointer mb-4 overflow-hidden shadow-sm"
     >
       {/* Dynamic Cursor Spotlight Highlight */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),rgba(249,115,22,0.09),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),rgba(249,115,22,0.08),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
       {/* Top-Right Pointing Arrow on Hover */}
-      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-full border border-white/10 bg-white/[0.05] text-white opacity-0 scale-75 translate-y-1 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:border-orange-500/50 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg group-hover:shadow-[0_0_25px_rgba(249,115,22,0.35)] pointer-events-none">
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-full border border-slate-200 bg-white text-slate-700 opacity-0 scale-75 translate-y-1 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:border-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-md group-hover:shadow-[0_0_25px_rgba(249,115,22,0.35)] pointer-events-none">
         <FiArrowUpRight size={22} className="transition-transform duration-300 " />
       </div>
 
       {/* Image Container */}
-      <div className="w-full sm:w-52 h-44 sm:h-36 shrink-0 relative z-10 overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 shadow-lg group-hover:border-orange-500/30 transition-all duration-500">
+      <div className="w-full sm:w-52 h-44 sm:h-36 shrink-0 relative z-10 overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm group-hover:border-orange-500/40 transition-all duration-500">
         <img
           src={pic}
           alt={heading}
           className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-80 group-hover:opacity-30 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-60 group-hover:opacity-10 transition-opacity duration-500" />
       </div>
 
       {/* Content Column */}
       <div className="flex-1 flex flex-col gap-2.5 relative z-10 w-full min-w-0 pr-8 sm:pr-10">
         {/* Heading */}
-        <h3 className="text-white font-bold text-xl sm:text-2xl tracking-tight transition-colors duration-300 group-hover:text-orange-400">
+        <h3 className="text-slate-900 font-bold text-xl sm:text-2xl tracking-tight transition-colors duration-300 group-hover:text-orange-500">
           {heading}
         </h3>
 
         {/* Description */}
-        <p className="text-gray-400 text-sm sm:text-base font-normal leading-relaxed">
+        <p className="text-slate-600 text-sm sm:text-base font-normal leading-relaxed">
           {discr}
         </p>
 
@@ -53,7 +53,7 @@ function RecentProjectCard({ pic, heading, discr, tags = [] }) {
             return (
               <span
                 key={isObject ? tag.name : index}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-gray-300 bg-white/[0.04] border border-white/[0.07] backdrop-blur-sm group-hover:border-orange-500/25 group-hover:bg-white/[0.08] group-hover:text-white transition-all duration-300"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-slate-700 bg-slate-100 border border-slate-200/80 backdrop-blur-sm group-hover:border-orange-500/30 group-hover:bg-orange-50/50 group-hover:text-slate-900 transition-all duration-300"
               >
                 {isObject ? (
                   <>

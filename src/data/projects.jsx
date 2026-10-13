@@ -37,7 +37,7 @@ export const projects = [
     discr: "A Hostel Booking System",
     tags: [
       { name: "Mongo", icon: <SiMongodb color="#47A248" /> },
-      { name: "Nextjs", icon: <RiNextjsLine color="#FFFFFF" /> },
+      { name: "Nextjs", icon: <RiNextjsLine color="#0f172a" /> },
       { name: "Tailwind", icon: <RiTailwindCssFill color="#06B6D4" /> },
     ],
   },
