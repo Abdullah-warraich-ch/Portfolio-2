@@ -23,7 +23,7 @@ function Navbar({
 
   return (
     <nav
-      className={`nav-dock-animate text-2xl lg:text-xl text-slate-700 gap-2 bg-white/80 backdrop-blur-md h-auto flex items-center px-3 py-1.5 rounded-2xl border border-slate-200/80 shadow-lg shadow-slate-200/50 ${isDocked ? "flex-row lg:flex-col w-auto" : "flex-row w-auto"
+      className={`nav-dock-animate text-2xl lg:text-xl text-[#998f8f] gap-2 bg-[#1c1a19]/80 backdrop-blur-md h-auto flex items-center px-3 py-1.5 rounded-2xl border border-white/10 shadow-2xl shadow-black/40 ${isDocked ? "flex-row lg:flex-col w-auto" : "flex-row w-auto"
         }`}
     >
       {navItems.map(({ icon: Icon, label, onClick }, i) => {
@@ -35,7 +35,7 @@ function Navbar({
             onClick={onClick}
             aria-label={`Go to ${label} section`}
             title={label.charAt(0).toUpperCase() + label.slice(1)}
-            className={`group relative rounded-xl p-2.5 transition-all duration-300 hover:bg-orange-500 hover:text-white hover:-translate-y-0.5 active:scale-90 ${isActive ? "text-orange-500 bg-orange-500/10" : "text-slate-600 hover:text-white"
+            className={`group relative rounded-xl p-2.5 transition-all duration-300 hover:bg-[#f46c38] hover:text-white hover:-translate-y-0.5 active:scale-90 ${isActive ? "text-[#f46c38] bg-[#f46c38]/15" : "text-[#998f8f] hover:text-white"
               }`}
           >
             <Icon size={20} className="transition-transform duration-300 group-hover:scale-110" />

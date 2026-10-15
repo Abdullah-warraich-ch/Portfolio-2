@@ -112,9 +112,9 @@
 .sidebar-skeleton {
   background: linear-gradient(
     110deg,
-    #e2e8f0 8%,
-    #f1f5f9 18%,
-    #e2e8f0 33%
+    #1c1a19 8%,
+    #2a2624 18%,
+    #1c1a19 33%
   );
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.5s ease-in-out infinite;
