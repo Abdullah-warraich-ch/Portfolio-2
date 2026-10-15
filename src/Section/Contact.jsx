@@ -6,10 +6,10 @@ const Contact = React.forwardRef(function Contact(props, ref) {
   const [status, setStatus] = useState("idle"); // "idle" | "submitting" | "success" | "error"
   const [errorMessage, setErrorMessage] = useState("");
 
-  const labelStyle = "text-slate-700 text-xs font-semibold tracking-wide";
+  const labelStyle = "text-[#998f8f] text-xs font-semibold tracking-wide uppercase";
   const inpStyle =
-    "w-full text-slate-800 text-sm bg-slate-50 p-3 rounded-xl placeholder-slate-400 border border-slate-200 outline-none focus:border-orange-500 focus:bg-white focus:ring-2 focus:ring-orange-500/20 transition-all duration-200 placeholder:text-xs";
-  const opStyle = "text-slate-700 text-xs bg-white";
+    "w-full text-white text-sm bg-white/5 p-3.5 rounded-xl placeholder-white/30 border border-white/10 outline-none focus:border-[#f46c38] focus:bg-white/[0.08] focus:ring-1 focus:ring-[#f46c38] transition-all duration-200 placeholder:text-xs";
+  const opStyle = "text-white bg-[#1c1a19]";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,26 +50,26 @@ const Contact = React.forwardRef(function Contact(props, ref) {
         <Heading FWord="LET'S WORK" LWord="TOGETHER" />
       </div>
 
-      <div className="bg-white/80 backdrop-blur-xl border border-slate-200/80 p-8 md:p-12 rounded-[2.5rem] shadow-xl shadow-slate-200/50 relative overflow-hidden group">
+      <div className="bg-[#1c1a19]/80 backdrop-blur-xl border border-white/10 p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-black/40 relative overflow-hidden group">
         {/* Decorative background glow */}
-        <div className="absolute -top-24 -right-24 w-64 h-64 bg-orange-500/5 rounded-full blur-[80px] group-hover:bg-orange-500/10 transition-all duration-700"></div>
-        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-orange-500/5 rounded-full blur-[80px] group-hover:bg-orange-500/10 transition-all duration-700"></div>
+        <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#f46c38]/10 rounded-full blur-[80px] group-hover:bg-[#f46c38]/15 transition-all duration-700 pointer-events-none"></div>
+        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#f46c38]/10 rounded-full blur-[80px] group-hover:bg-[#f46c38]/15 transition-all duration-700 pointer-events-none"></div>
 
         {status === "success" ? (
           <div className="flex flex-col items-center justify-center text-center py-12 px-4 gap-4 relative z-10 animate-fadeIn">
-            <div className="h-16 w-16 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-500 mb-2">
+            <div className="h-16 w-16 rounded-full bg-[#f46c38]/20 border border-[#f46c38]/40 flex items-center justify-center text-[#f46c38] mb-2">
               <FiCheckCircle size={36} />
             </div>
-            <h3 className="text-slate-900 text-2xl font-bold tracking-tight">
+            <h3 className="text-white text-2xl font-bold tracking-tight">
               Message Received!
             </h3>
-            <p className="text-slate-600 max-w-md text-sm sm:text-base leading-relaxed">
+            <p className="text-[#998f8f] max-w-md text-sm sm:text-base leading-relaxed">
               Thank you for reaching out. Your message has been sent successfully, and I will get back to you shortly.
             </p>
             <button
               type="button"
               onClick={() => setStatus("idle")}
-              className="mt-4 px-6 py-2.5 rounded-full bg-slate-900 text-white text-xs font-semibold uppercase tracking-wider hover:bg-orange-500 transition-all duration-300 shadow-sm"
+              className="mt-4 px-6 py-2.5 rounded-full bg-[#f46c38] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#ff7b47] transition-all duration-300 shadow-lg shadow-[#f46c38]/20"
             >
               Send Another Message
             </button>
@@ -105,7 +105,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
                   <option value="job" className={opStyle}>Job Opportunity</option>
                   <option value="hi" className={opStyle}>Just Saying Hi!</option>
                 </select>
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/40">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M7.247 11.14 2.451 5.658C2.185 5.355 2.403 5 2.808 5h10.384a.207.207 0 0 1 .173.344l-4.796 5.482a.25.25 0 0 1-.397 0z" />
                   </svg>
@@ -128,7 +128,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
 
             {/* Error banner */}
             {status === "error" && (
-              <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-red-600 text-xs">
+              <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-xs">
                 {errorMessage}
               </div>
             )}
@@ -138,7 +138,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="w-full bg-slate-900 text-white font-bold py-4 rounded-2xl text-lg tracking-widest uppercase hover:bg-orange-500 transition-all duration-500 shadow-lg shadow-slate-900/10 hover:shadow-orange-500/20 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-[#f46c38] text-white font-bold py-4 rounded-xl text-base tracking-widest uppercase hover:bg-[#ff7b47] transition-all duration-300 shadow-xl shadow-[#f46c38]/20 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {status === "submitting" ? (
                   <>

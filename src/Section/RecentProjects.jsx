@@ -21,7 +21,7 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
 
       <div className="flex flex-col gap-2 relative stagger-reveal">
         {/* Vertical connector line */}
-        <div className="absolute left-10 md:left-12 top-0 bottom-0 w-px bg-slate-200 z-0 hidden lg:block" />
+        <div className="absolute left-10 md:left-12 top-0 bottom-0 w-px bg-white/10 z-0 hidden lg:block" />
 
         {projects.slice(0, visibleCount).map((project) => (
           <a
@@ -45,13 +45,13 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
         <div className="flex justify-center mt-4">
           <button
             onClick={showMoreProjects}
-            className="group relative px-8 py-3 rounded-full bg-white border border-slate-200 text-slate-800 font-bold tracking-widest uppercase text-xs overflow-hidden transition-all duration-500 hover:border-orange-500/50 hover:bg-orange-500 hover:text-white shadow-md active:scale-95"
+            className="group relative px-8 py-3.5 rounded-full bg-[#1c1a19] border border-white/10 text-white font-bold tracking-widest uppercase text-xs overflow-hidden transition-all duration-300 hover:border-[#f46c38]/50 hover:bg-[#f46c38] shadow-lg shadow-black/30 active:scale-95"
           >
             <span className="relative z-10 flex items-center gap-2">
               View All Projects
-              <IoIosArrowForward className="transition-transform duration-500 group-hover:translate-x-1" />
+              <IoIosArrowForward className="transition-transform duration-300 group-hover:translate-x-1" />
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-orange-500/10 to-orange-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/15 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
           </button>
         </div>
       )}

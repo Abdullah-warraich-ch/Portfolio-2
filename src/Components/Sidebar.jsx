@@ -20,8 +20,8 @@ function Sidebar() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
-    <div className="animated-border relative flex flex-col p-[2px] rounded-2xl lg:sticky top-20 shadow-xl shadow-slate-200/50">
-      <div className="bg-white p-5 lg:p-10 rounded-2xl items-center gap-8 flex flex-col border border-slate-100">
+    <div className="animated-border relative flex flex-col p-[2px] rounded-2xl lg:sticky top-20 shadow-2xl shadow-black/50">
+      <div className="bg-[#1c1a19] p-5 lg:p-8 rounded-2xl items-center gap-7 flex flex-col border border-white/10">
         {/* Full image — no cropping, with reserved space & skeleton */}
         <div
           className="relative group w-full overflow-hidden rounded-2xl"
@@ -43,41 +43,40 @@ function Sidebar() {
               imgLoaded ? "sidebar-img-visible" : "sidebar-img-hidden"
             }`}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent rounded-2xl" />
-          <span className="absolute bottom-3 left-3 text-white text-xs font-medium bg-orange-500/90 px-2.5 py-1 rounded-full backdrop-blur-sm shadow-sm">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-2xl" />
+          <span className="absolute bottom-3 left-3 text-white text-xs font-medium bg-[#f46c38] px-3 py-1 rounded-full backdrop-blur-sm shadow-sm flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#c5ff41] animate-pulse" />
             Available for Work
           </span>
         </div>
 
         {/* Name */}
         <div className="text-center">
-          <h1 className="font-poppins font-bold text-3xl text-slate-900">
+          <h1 className="font-poppins font-bold text-3xl text-white tracking-tight">
             Abdullah
           </h1>
-          <div className="h-0.5 w-10 bg-orange-500 rounded-full mx-auto mt-2" />
+          <div className="h-0.5 w-10 bg-[#f46c38] rounded-full mx-auto mt-2" />
         </div>
 
         {/* Bio */}
-        <div className="lg:mt-2">
-          <p className="font-medium leading-7 text-slate-600 text-center text-xl">
-            A <span className="text-slate-900 font-semibold">Software Engineer</span> who has
+        <div className="lg:mt-1">
+          <p className="font-medium leading-7 text-[#998f8f] text-center text-lg">
+            A <span className="text-white font-semibold">Software Engineer</span> who has
             developed countless innovative solutions.
           </p>
         </div>
 
-        {/* Social icons — show original brand color on hover */}
-        <div className="flex gap-4 text-2xl text-slate-400">
+        {/* Social icons — show hover color with subtle glowing box */}
+        <div className="flex gap-4 text-2xl text-[#998f8f]">
           {socialLinks.map(({ Icon, href, hoverColor }, i) => (
             <a
               key={i}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-all duration-300 hover:scale-120 hover:-translate-y-1 drop-shadow-[0_0_8px_rgba(249,115,22,0.3)]"
-              onMouseEnter={(e) => (e.currentTarget.style.color = hoverColor)}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "")}
+              className="p-2.5 rounded-xl border border-white/5 bg-white/[0.03] text-[#998f8f] transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:border-[#f46c38]/40 hover:bg-[#f46c38]/10 hover:text-white"
             >
-              <Icon />
+              <Icon size={20} />
             </a>
           ))}
         </div>
@@ -86,13 +85,13 @@ function Sidebar() {
         <a
           href="/Muhammad_Abdullah.pdf"
           download
-          className="relative overflow-hidden group text-center w-full bg-slate-900 text-white font-semibold py-3 rounded-xl hover:bg-orange-500 transition-all duration-300 shadow-md active:scale-95 block uppercase tracking-widest text-sm"
+          className="relative overflow-hidden group text-center w-full bg-[#f46c38] text-white font-semibold py-3.5 rounded-xl hover:bg-[#ff7b47] transition-all duration-300 shadow-lg shadow-[#f46c38]/20 active:scale-95 block uppercase tracking-widest text-xs"
         >
           <span className="relative z-10 flex items-center justify-center gap-2">
             Download CV
-            <AnimatedEye size={20} className="text-white transition-colors duration-300" />
+            <AnimatedEye size={18} className="text-white transition-colors duration-300" />
           </span>
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-white/20 to-orange-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
         </a>
       </div>
     </div>

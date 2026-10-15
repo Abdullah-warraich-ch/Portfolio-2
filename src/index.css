@@ -5,10 +5,13 @@
 @theme {
   --font-poppins: "Poppins", sans-serif;
   --font-inter: "Inter", sans-serif;
-  --color-primary: #f8fafc;
+  --color-primary: #151312;
   --color-secondary: #ffffff;
-  --color-accent: #f97316;
-  --color-text: #0f172a;
+  --color-accent: #f46c38;
+  --color-accent-lime: #c5ff41;
+  --color-muted: #998f8f;
+  --color-card-dark: #1c1a19;
+  --color-border-dark: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -17,8 +20,8 @@
 }
 
 body {
-  background-color: #f8fafc;
-  color: #0f172a;
+  background-color: #151312;
+  color: #ffffff;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -41,21 +44,21 @@ body::after {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #151312;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #2a2624;
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #f97316;
+  background: #f46c38;
 }
 
 /* ── Selection ── */
 ::selection {
-  background: rgba(249, 115, 22, 0.25);
+  background: rgba(244, 108, 56, 0.35);
   color: #fff;
 }
 
@@ -77,7 +80,7 @@ body::after {
   background: conic-gradient(from 0deg,
       transparent 0deg,
       transparent 160deg,
-      #f97316 180deg,
+      #f46c38 180deg,
       transparent 200deg,
       transparent 360deg);
   transform: translate(-50%, -50%);
